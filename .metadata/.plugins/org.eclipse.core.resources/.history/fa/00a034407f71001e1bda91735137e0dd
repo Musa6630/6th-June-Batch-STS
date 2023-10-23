@@ -93,14 +93,5 @@ public class Lead_Controller {
 		model.addAttribute("lead", lead);
 		return "update_lead";
 	}
-	
-	@RequestMapping("/updatelead")
-	public String updateLead(LeadDto dto, Model model) {
-		leadService.updateLead(dto);
-		List<Lead>  leads= leadService.findAllLeads();
-//		System.out.println(leads);
-		model.addAttribute("leads", leads);
-		return "list_leads";
-	}
 
 }

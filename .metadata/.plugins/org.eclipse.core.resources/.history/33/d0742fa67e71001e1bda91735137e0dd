@@ -2,7 +2,6 @@ package com.marketing_App1.service;
 
 import java.util.List;
 
-import com.marketing_App1.dto.LeadDto;
 import com.marketing_App1.entity.Lead;
 
 public interface LeadService {
@@ -16,8 +15,6 @@ public interface LeadService {
 	public void updateLeadByid(long id);
 
 	public Lead findLeadByid(long id);
-
-	public void updateLead(LeadDto dto);
 
 	
 }

@@ -15,7 +15,6 @@
 
 	<form action="update_lead" method="post">
 		<pre>
-		<input type="hidden" name="id" value="${lead.id }"/>
 		First Name: <input class="mb-2" type="text" name="firstName" value="${lead.firstName }"/> 
 		Last Name: <input class="mb-2" type="text" name="lastName" value="${lead.lastName }"/> 
 		Mobile No: <input class="mb-2" type="text" name="mobile" value="${lead.mobile }"/> 

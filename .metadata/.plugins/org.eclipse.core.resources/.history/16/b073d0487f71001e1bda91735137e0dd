@@ -95,7 +95,7 @@ public class Lead_Controller {
 	}
 	
 	@RequestMapping("/updatelead")
-	public String updateLead(LeadDto dto, Model model) {
+	public String updateLead(LeadDto dto) {
 		leadService.updateLead(dto);
 		List<Lead>  leads= leadService.findAllLeads();
 //		System.out.println(leads);

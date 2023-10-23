@@ -7,7 +7,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.marketing_App1.dto.LeadDto;
 import com.marketing_App1.entity.Lead;
 import com.marketing_App1.repository.Leadrepository;
 
@@ -47,19 +46,6 @@ public class LeadServiceIMPL implements LeadService {
 	public Lead findLeadByid(long id) {
 		// TODO Auto-generated method stub
 		return Leadrepo.findById(id).get();
-		
-	}
-
-	@Override
-	public void updateLead(LeadDto dto) {
-		// TODO Auto-generated method stub
-		Lead lead=new Lead();
-		lead.setId(dto.getId());
-		lead.setFirstName(dto.getFirstName());
-		lead.setLastName(dto.getLastName());
-		lead.setEmail(dto.getEmail());
-		lead.setMobile(dto.getMobile());
-		Leadrepo.save(lead);
 		
 	}
 
