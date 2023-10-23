@@ -1,0 +1,8 @@
+package com.marketing_App1.util;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class emailService {
+
+}

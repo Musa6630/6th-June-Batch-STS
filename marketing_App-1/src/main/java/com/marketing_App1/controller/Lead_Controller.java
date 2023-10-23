@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.marketing_App1.dto.LeadDto;
 import com.marketing_App1.entity.Lead;
 import com.marketing_App1.service.LeadService;
+import com.marketing_App1.util.emailService;
 
 
 
@@ -28,11 +29,15 @@ public class Lead_Controller {
 	private LeadService leadService;
 	// http://localhost:8080/viewLeadForm
 
+	@Autowired
+	private emailService emailService;
 	
 	@RequestMapping("/saveLead")
 	public String saveLeadInfo(@ModelAttribute Lead lead, ModelMap model) {
-		model.addAttribute("msg", "Record is saved");
+		
 		leadService.saveLead(lead);
+		emailService.sendEmail(lead.getEmail(), "Test Email", "Lauda k tarah shakal h gaandu");
+		model.addAttribute("msg", "Record is saved");
 		return "create lead"; // return null;
 
 	}
