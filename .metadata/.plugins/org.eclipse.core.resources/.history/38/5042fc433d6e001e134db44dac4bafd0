@@ -1,0 +1,10 @@
+package com.marketing_App1.service;
+
+import com.marketing_App1.entity.Lead;
+
+public interface LeadService {
+
+	public void saveLead(Lead lead);
+
+	
+}

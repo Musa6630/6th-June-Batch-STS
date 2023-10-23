@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+C:\Users\devil\Desktop\6th June Batch STS\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3125852592.index
+\marketing_App\src\main\java
+C:\Users\devil\Desktop\6th June Batch STS\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\35702009.index
+\marketing_App-1\src\main\java

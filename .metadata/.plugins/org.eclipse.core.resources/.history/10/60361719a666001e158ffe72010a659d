@@ -1,0 +1,49 @@
+package com.marketing_App1.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.marketing_App1.entity.Lead;
+import com.marketing_App1.service.LeadService;
+
+@Controller
+public class Lead_Controller {
+
+	@RequestMapping("/viewLeadForm")
+	public String viewLeadForm() {
+		return "create_lead";
+	}
+	
+	@Autowired
+	private LeadService leadService;
+	// http://localhost:8080/viewLeadForm
+
+
+
+	/*
+	 * @RequestMapping("/saveLead") public String saveLeadInfo(Lead lead) {
+	 * leadService.saveLead(lead); return "create lead"; // return null;
+	 * 
+	 * }
+	 */
+	
+	@RequestMapping("/saveLead")
+	public String saveLeadInfo(
+			@RequestParam("firstName") String firstName,
+			@RequestParam("LastName") String LastName,
+			@RequestParam("Mobile") long mobile,
+			@RequestParam("Email") String EmailId
+			) 
+	{
+		Lead l=new Lead();
+		l.setFirstName(firstName);
+		l.setLastName(LastName);
+		l.setMobile(mobile);
+		l.setEmail(EmailId);
+		leadService.saveLead(l);
+		return "Create Lead";
+	}
+	
+}
